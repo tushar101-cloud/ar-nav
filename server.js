@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://rishitush:6STJgxPWUeelXVhL@cluster0.1tmfl.mongodb.net/ar_navigation?retryWrites=true&w=majority&appName=cluster0', {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
